@@ -1,3 +1,45 @@
+/* --------------------------
+
+        COLORI
+
+---------------------------*/
+.ms-clr-my-account{
+    background-color: #eaeaea;
+}
+.ms-clr-notifiche{
+    background-color: #8edafc;
+}
+.ms-clr-input-nomi{
+    background-color: #fafafa;
+}
+/* --------------------------
+
+        CIRCLE/CIRCLE-IMG
+
+---------------------------*/
+.ms-circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.ms-circle-img{
+    width: 100%;
+    height: 100%;
+}
+.ms-ps-abs{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    font-size: 20px;
+    color: #8edafc;
+}
+/* --------------------------
+
+        BODY
+
+---------------------------*/
 body{
     height: 100vh;
     background: linear-gradient(to bottom, #1B9688 150px, #DBDBD2 150px, #DBDBD2 100%);
@@ -22,36 +64,62 @@ body{
 ---------------------------*/
 .left{
     height: 100%;
-    width: 30%;
+    min-width: 400px;
     display: flex;
     flex-direction: column;
 }
 /* --------------------------
         MY-ACCOUNT
 ---------------------------*/
-.my-account{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.ms-my-account{
     height: 70px;
-    background-color: #eaeaea;
 }
 /* --------------------------
         NOTIFICHE
 ---------------------------*/
-.notifiche{
+.ms-notifiche{
+    height: 70px;
+}
+/* --------------------------
+        INPUT-NOMI
+---------------------------*/
+.ms-input-nomi{
+    height: 50px;
+}
+.ms-chat{
+    overflow-y: auto;
+}
+
+
+
+
+.test{
+    font-size: 14px;
+    font-weight: 400;
+}
+/* --------------------------
+
+        RIGHT-COLUMN
+---------------------------*/
+.right{
+    height: 100%;
+    width: calc(100% - 400px);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-image: url(../img/mine.jpg);
+}
+.top{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70px;
-    background-color: #8edafc;
+    border: 1px solid;
 }
-/* --------------------------
-
-        LEFT-COLUMN
----------------------------*/
-.right{
-    height: 100%;
-    width: 70%;
+.bottom{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    border: 1px solid;
 }
