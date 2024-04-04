@@ -1,0 +1,57 @@
+body{
+    height: 100vh;
+    background: linear-gradient(to bottom, #1B9688 150px, #DBDBD2 150px, #DBDBD2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+/* --------------------------
+
+        APP-CONTAINER
+
+---------------------------*/
+.app{
+    background-color: antiquewhite;
+    height: 95vh;
+    width: 75vw;
+    display: flex;
+}
+/* --------------------------
+
+        LEFT-COLUMN
+---------------------------*/
+.left{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+/* --------------------------
+        MY-ACCOUNT
+---------------------------*/
+.my-account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #eaeaea;
+}
+/* --------------------------
+        NOTIFICHE
+---------------------------*/
+.notifiche{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #8edafc;
+}
+/* --------------------------
+
+        LEFT-COLUMN
+---------------------------*/
+.right{
+    height: 100%;
+    width: 70%;
+    display: flex;
+}
