@@ -3,10 +3,13 @@
         COLORI
 
 ---------------------------*/
-.ms-clr-my-account{
+.ms-clr-lightgrey{
     background-color: #eaeaea;
 }
-.ms-clr-notifiche{
+.ms-clr-darkgrey{
+    color: #b1b1b1;
+}
+.ms-clr-lightblue{
     background-color: #8edafc;
 }
 .ms-clr-input-nomi{
@@ -52,7 +55,7 @@ body{
         APP-CONTAINER
 
 ---------------------------*/
-.app{
+#app{
     background-color: antiquewhite;
     height: 95vh;
     width: 75vw;
@@ -67,6 +70,7 @@ body{
     min-width: 400px;
     display: flex;
     flex-direction: column;
+    border: 1px solid #b1b1b1;
 }
 /* --------------------------
         MY-ACCOUNT
@@ -89,10 +93,6 @@ body{
 .ms-chat{
     overflow-y: auto;
 }
-
-
-
-
 .test{
     font-size: 14px;
     font-weight: 400;
@@ -108,18 +108,35 @@ body{
     justify-content: space-between;
     flex-direction: column;
     background-image: url(../img/mine.jpg);
+    border: 1px solid #b1b1b1;
 }
 .top{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70px;
-    border: 1px solid;
+}
+/* --------------------------
+        CHAT-BOX
+---------------------------*/
+.ms-chat-box{
+    height: calc(100% - 140px);
+}
+.ms-chat-received{
+    background-color: white;
+    min-height: 10px;
+    max-width: 300px;
+    margin: 0 5%;
+}
+.ms-chat-sent{
+    background-color: #d5f9ba;
+    min-height: 10%;
+    max-width: 300px;
+    margin: 0 5%;
 }
 .bottom{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70px;
-    border: 1px solid;
 }

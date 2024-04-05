@@ -14,47 +14,110 @@
     <script src="https://unpkg.com/vue@3"></script>
 </head>
 <body>
-
-    <div class="app">
+    <div id="app">
+        <!--COLONNA DI SINISTRA-->
         <div class="left">
-            <div class="ms-my-account ms-clr-my-account">
-                MY ACCOUNT
-            </div>
-            <div class="ms-notifiche ms-clr-notifiche">
-                NOTIFICHE
-            </div>
-            <div class="input-group ms-input-nomi ms-clr-input-nomi px-2">
-                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass my-1"></i></span>
-                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-describedby="basic-addon1">
-            </div>
-            <div class="ms-chat">
+            <!--MY ACCOUNT-->
+            <div class="ms-my-account d-flex justify-content-between align-items-center ms-clr-lightgrey px-2">
                 <div class="d-flex">
                     <div class="ms-circle">
-                        <img class="circle-img" src="img/avatar_1.jpg">
+                        <img class="ms-circle-img" src="./img/avatar_io.jpg">
                     </div>
-                    <p>Michele</p>
-                    <p>Ultimo messaggio inviato</p>
+                    <p class="d-flex pt-3">Sofia</p>
                 </div>
-                <div class="ms-circle">
-                    <img class="circle-img" src="img/avatar_2.jpg">
-                    <p>Fabio</p>
-                    <p>Ultimo messaggio inviato</p>
+                <div class="px-2">
+                    <i class="fa-solid fa-circle-notch ms-clr-darkgrey px-2"></i>
+                    <i class="fa-solid fa-message ms-clr-darkgrey px-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical ms-clr-darkgrey px-2"></i>
+                </div>
+            </div>
+            <!--NOTIFICHE-->
+            <div class="ms-notifiche d-flex align-items-center px-2 ms-clr-lightblue">
+                <div class="ms-circle bg-light">
+                    <i class="ms-circle-img ms-ps-abs fa-solid fa-bell-slash"></i>
+                </div>
+                <div class="d-flex flex-column">
+                    <h5 class="test">Ricevi notifiche di nuovi messaggi</h5>
+                    <h5 class="test">Attiva notifiche desktop</h5>
+                </div>
+            </div>
+            <!--INPUT CERCA-->
+            <div class="input-group ms-input-nomi d-flex justify-content-center align-items-center ms-clr-input-nomi px-2">
+                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass my-1"></i></span>
+                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+            </div>
+            <!--CHAT-->
+            <div class="ms-chat">
+                <div class="d-flex p-2">
+                    <div class="ms-circle">
+                        <img class="ms-circle-img" src="./img/avatar_1.jpg">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <h5 class="test">Michele</h5>
+                        <h5 class="test">Ultimo messaggio inviato</h5>
+                    </div>
+                </div>
+                <div class="d-flex p-2">
+                    <div class="ms-circle">
+                        <img class="ms-circle-img" src="./img/avatar_2.jpg">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <h5 class="test">Fabio</h5>
+                        <h5 class="test">Ultimo messaggio inviato</h5>
+                    </div>
                 </div>
             </div>
         </div>
+        <!--COLONNA DI DESTRA-->
         <div class="right">
-            <div class="top ms-clr-my-account">
-                dfdf
+            <!--BARRA IN ALTO-->
+            <div class="top ms-clr-lightgrey d-flex justify-content-between px-2">
+                <div class="d-flex">
+                    <div class="ms-circle">
+                        <img class="ms-circle-img" src="./img/avatar_1.jpg">
+                    </div>
+                    <p class="d-flex pt-3">Michele</p>
+                </div>
+                <div class="px-2">
+                    <i class="fa-solid fa-magnifying-glass ms-clr-darkgrey px-2"></i>
+                    <i class="fa-solid fa-paperclip ms-clr-darkgrey px-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical ms-clr-darkgrey px-2"></i>
+                </div>
             </div>
-            <div class="bottom ms-clr-my-account">
+            <!-- CHAT -->
+            <div class="ms-chat-box px-5">
+                <div class="container d-flex justify-content-between">
+                    <div class="row mt-5">
+                        <div class="col">
+                            <div class="ms-chat-received rounded mt-5">
+                                <div class="p-2">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="ms-chat-sent rounded mt-5">
+                                <div class="p-2">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--BARRA IN BASSO-->
+            <div class="bottom ms-clr-lightgrey">
                 <div>
-                    <i class="fa-regular fa-face-smile mx-3"></i>
+                    <i class="fa-regular fa-face-smile ms-clr-darkgrey px-4"></i>
                 </div>
-                <div class="input-group ms-input-nomi ms-clr-input-nomi px-2">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass my-1"></i></span>
-                    <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-describedby="basic-addon1">
+                <div class="input-group ms-input-nomi ms-clr-input-nomi">
+                    <input type="text" class="form-control" placeholder="Scrivi un messaggio">
                 </div>
-    
+                <div>
+                    <i class="fa-solid fa-microphone px-4"></i>
+                </div>
             </div>
         </div>
     </div>
