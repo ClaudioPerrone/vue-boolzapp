@@ -12,7 +12,7 @@
 .ms-clr-lightblue{
     background-color: #8edafc;
 }
-.ms-clr-input-nomi{
+.ms-clr-lightwhite{
     background-color: #fafafa;
 }
 /* --------------------------
@@ -56,7 +56,6 @@ body{
 
 ---------------------------*/
 #app{
-    background-color: antiquewhite;
     height: 95vh;
     width: 75vw;
     display: flex;
@@ -92,6 +91,10 @@ body{
 }
 .ms-chat{
     overflow-y: auto;
+    background-color: white;
+}
+.ms-chat > div{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .test{
     font-size: 14px;
