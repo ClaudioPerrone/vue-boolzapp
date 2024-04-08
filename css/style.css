@@ -1,18 +1,21 @@
+ul, li{
+    list-style: none;
+}
 /* --------------------------
 
         COLORI
 
 ---------------------------*/
-.ms-clr-lightgrey{
+.ms-bgclr-lightgrey{
     background-color: #eaeaea;
 }
 .ms-clr-darkgrey{
     color: #b1b1b1;
 }
-.ms-clr-lightblue{
+.ms-bgclr-lightblue{
     background-color: #8edafc;
 }
-.ms-clr-lightwhite{
+.ms-bgclr-lightwhite{
     background-color: #fafafa;
 }
 /* --------------------------
@@ -75,21 +78,22 @@ body{
         MY-ACCOUNT
 ---------------------------*/
 .ms-my-account{
-    height: 70px;
+    height: 60px;
 }
 /* --------------------------
         NOTIFICHE
 ---------------------------*/
 .ms-notifiche{
-    height: 70px;
+    height: 60px;
 }
 /* --------------------------
         INPUT-NOMI
 ---------------------------*/
 .ms-input-nomi{
-    height: 50px;
+    height: 60px;
 }
 .ms-chat{
+    height: calc(100% - 180px);
     overflow-y: auto;
     background-color: white;
 }
@@ -117,21 +121,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
+    height: 60px;
 }
 /* --------------------------
         CHAT-BOX
 ---------------------------*/
 .ms-chat-box{
-    height: calc(100% - 140px);
+    height: calc(100% - 120px);
 }
-.ms-chat-received{
+.received{
     background-color: white;
     min-height: 10px;
     max-width: 300px;
     margin: 0 5%;
 }
-.ms-chat-sent{
+.sent{
     background-color: #d5f9ba;
     min-height: 10%;
     max-width: 300px;
@@ -141,5 +145,5 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
+    height: 60px;
 }

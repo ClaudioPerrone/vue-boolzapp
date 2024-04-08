@@ -20,9 +20,13 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+          searchContact: '',
+          userText: '',
+          currentContactIndex: 0,
+          currentIndex: 0,
             contacts: [{
                 name: 'Michele',
-                avatar: '_1',
+                avatar: './img/avatar_1.jpg',
                 visible: true,
                 messages: [{
                     date: '10/01/2020 15:30:55',
@@ -43,7 +47,7 @@ createApp({
               },
               {
                 name: 'Fabio',
-                avatar: '_2',
+                avatar: './img/avatar_2.jpg',
                 visible: true,
                 messages: [{
                     date: '20/03/2020 16:30:00',
@@ -64,7 +68,7 @@ createApp({
               },
               {
                 name: 'Samuele',
-                avatar: '_3',
+                avatar: './img/avatar_3.jpg',
                 visible: true,
                 messages: [{
                     date: '28/03/2020 10:10:40',
@@ -85,7 +89,7 @@ createApp({
               },
               {
                 name: 'Luisa',
-                avatar: '_4',
+                avatar: './img/avatar_4.jpg',
                 visible: true,
                 messages: [{
                     date: '10/01/2020 15:30:55',
@@ -103,6 +107,56 @@ createApp({
         };
     },
     methods: {
-      
-    }
-}).mount('#app');
+      activeContacts(index) {
+        this.currentContactIndex = index;
+    },
+     //PER AGGIUNGERE UN MESSAGGIO
+     addMessage() {
+      if (this.userText !== '') {
+          //IL MESSAGGIO CREATO DIVENTA L'OGGETTO PER L'ARRAY
+          let newMessage = {
+              date: '10/01/2020 15:50:00',
+              message: '',
+              status: 'sent'
+          }
+          // Inserisco nell'oggetto il testo preso da quello inserito dall'utente
+          newMessage.message = this.userText;
+          // Inserisco l'oggetto nell'array
+          const messageNew = this.contacts[this.currentContactIndex].messages;
+          messageNew.push(newMessage);
+          this.userText = '';
+          //SETTO IL TIMER PER LA RISPOSTA
+          setTimeout(()=> {
+              let newAnswer = {
+                  date: '10/01/2020 15:50:00',
+                  message: 'ok',
+                  status: 'received'
+              }
+              messageNew.push(newAnswer);
+              console.log(newAnswer)
+          } ,1000)
+      }
+  },
+    search(index) {
+        for (let index = 0; index < this.contacts.length; index++) {
+            if (this.contacts[index].name.toUpperCase().includes(this.searchContact.toUpperCase()) == false) {
+                this.contacts[index].visible = false;
+            }
+        }
+    },
+},
+computed: {
+    currentContact() {
+        return this.filterName[this.currentContactIndex]
+    },
+    currentName() {
+        return this.currentContact.name
+    },
+    currentVisible() {
+        return this.currentContact.visible
+    },
+    filterName() {
+       return this.contacts.filter((contact) => contact.name.toLowerCase().includes(this.searchContact.toLowerCase()));
+    },
+},
+}).mount('#app')
